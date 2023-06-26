@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>database.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="database.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibraryLogger\ClassLibraryLogger.csproj" />
+    <ProjectReference Include="..\ClassLibraryMysql\ClassLibraryMysql.csproj" />
+    <ProjectReference Include="..\ClassLibraryStores\ClassLibraryStores.csproj" />
+  </ItemGroup>
+
+</Project>

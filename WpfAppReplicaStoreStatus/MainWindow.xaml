@@ -1,0 +1,703 @@
+﻿<Window x:Class="WpfAppReplicaStoreStatus.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppReplicaStoreStatus"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="805" Width="1024" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Canvas x:Name="canvasConnected" Grid.Row="0" Background="YellowGreen" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SizeChanged="canvasConnected_SizeChanged">
+            <StackPanel x:Name="panelConnected" Orientation="Horizontal" Width="{Binding PanelConnectedWidth, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"  Height="130" Canvas.Left="{Binding CanvasLeftConnected, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Loaded="panel_Loaded">
+                <StackPanel.Resources>
+                    <Storyboard x:Key="slide">
+                        <DoubleAnimation From="0" To="1" Duration="{Binding TimeConnected, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                      Storyboard.TargetProperty="X"
+                      Storyboard.TargetName="transferCurreny"
+                      RepeatBehavior="Forever"/>
+                    </Storyboard>
+                </StackPanel.Resources>
+                <StackPanel.RenderTransform>
+                    <TranslateTransform x:Name="transferCurreny" X="0"/>
+                </StackPanel.RenderTransform>
+                <StackPanel.Triggers>
+                    <EventTrigger RoutedEvent="StackPanel.Loaded">
+                        <BeginStoryboard Storyboard="{StaticResource slide}" />
+                    </EventTrigger>
+                </StackPanel.Triggers>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store01_Ok}">
+                    <TextBlock x:Name="store01_Ok" Width="80" Height="80" Text="01" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store02_Ok}">
+                    <TextBlock x:Name="store02_Ok" Width="80" Height="80" Text="02" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store03_Ok}">
+                    <TextBlock x:Name="store03_Ok" Width="80" Height="80" Text="03" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store04_Ok}">
+                    <TextBlock x:Name="store04_Ok" Width="80" Height="80" Text="04" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store05_Ok}">
+                    <TextBlock x:Name="store05_Ok" Width="80" Height="80" Text="05" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store06_Ok}">
+                    <TextBlock x:Name="store06_Ok" Width="80" Height="80" Text="06" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store07_Ok}">
+                    <TextBlock x:Name="store07_Ok" Width="80" Height="80" Text="07" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store08_Ok}">
+                    <TextBlock x:Name="store08_Ok" Width="80" Height="80" Text="08" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store09_Ok}">
+                    <TextBlock x:Name="store09_Ok" Width="80" Height="80" Text="09" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store10_Ok}">
+                    <TextBlock x:Name="store10_Ok" Width="80" Height="80" Text="10" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store12_Ok}">
+                    <TextBlock x:Name="store12_Ok" Width="80" Height="80" Text="12" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store13_Ok}">
+                    <TextBlock x:Name="store13_Ok" Width="80" Height="80" Text="13" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store14_Ok}">
+                    <TextBlock x:Name="store14_Ok" Width="80" Height="80" Text="14" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store15_Ok}">
+                    <TextBlock x:Name="store15_Ok" Width="80" Height="80" Text="15" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store16_Ok}">
+                    <TextBlock x:Name="store16_Ok" Width="80" Height="80" Text="16" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store18_Ok}">
+                    <TextBlock x:Name="store18_Ok" Width="80" Height="80" Text="18" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store19_Ok}">
+                    <TextBlock x:Name="store19_Ok" Width="80" Height="80" Text="19" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store20_Ok}">
+                    <TextBlock x:Name="store20_Ok" Width="80" Height="80" Text="20" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store21_Ok}">
+                    <TextBlock x:Name="store21_Ok" Width="80" Height="80" Text="21" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store22_Ok}">
+                    <TextBlock x:Name="store22_Ok" Width="80" Height="80" Text="22" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store23_Ok}">
+                    <TextBlock x:Name="store23_Ok" Width="80" Height="80" Text="23" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store24_Ok}">
+                    <TextBlock x:Name="store24_Ok" Width="80" Height="80" Text="24" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store26_Ok}">
+                    <TextBlock x:Name="store26_Ok" Width="80" Height="80" Text="26" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store27_Ok}">
+                    <TextBlock x:Name="store27_Ok" Width="80" Height="80" Text="27" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store28_Ok}">
+                    <TextBlock x:Name="store28_Ok" Width="80" Height="80" Text="28" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store30_Ok}">
+                    <TextBlock x:Name="store30_Ok" Width="80" Height="80" Text="30" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store31_Ok}">
+                    <TextBlock x:Name="store31_Ok" Width="80" Height="80" Text="31" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store32_Ok}">
+                    <TextBlock x:Name="store32_Ok" Width="80" Height="80" Text="32" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store33_Ok}">
+                    <TextBlock x:Name="store33_Ok" Width="80" Height="80" Text="33" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store34_Ok}">
+                    <TextBlock x:Name="store34_Ok" Width="80" Height="80" Text="34" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store35_Ok}">
+                    <TextBlock x:Name="store35_Ok" Width="80" Height="80" Text="35" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store36_Ok}">
+                    <TextBlock x:Name="store36_Ok" Width="80" Height="80" Text="36" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store37_Ok}">
+                    <TextBlock x:Name="store37_Ok" Width="80" Height="80" Text="37" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store38_Ok}">
+                    <TextBlock x:Name="store38_Ok" Width="80" Height="80" Text="38" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store39_Ok}">
+                    <TextBlock x:Name="store39_Ok" Width="80" Height="80" Text="39" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store40_Ok}">
+                    <TextBlock x:Name="store40_Ok" Width="80" Height="80" Text="40" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store41_Ok}">
+                    <TextBlock x:Name="store41_Ok" Width="80" Height="80" Text="41" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store42_Ok}">
+                    <TextBlock x:Name="store42_Ok" Width="80" Height="80" Text="42" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store43_Ok}">
+                    <TextBlock x:Name="store43_Ok" Width="80" Height="80" Text="43" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store44_Ok}">
+                    <TextBlock x:Name="store44_Ok" Width="80" Height="80" Text="44" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store45_Ok}">
+                    <TextBlock x:Name="store45_Ok" Width="80" Height="80" Text="45" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store46_Ok}">
+                    <TextBlock x:Name="store46_Ok" Width="80" Height="80" Text="46" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store47_Ok}">
+                    <TextBlock x:Name="store47_Ok" Width="80" Height="80" Text="47" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store48_Ok}">
+                    <TextBlock x:Name="store48_Ok" Width="80" Height="80" Text="48" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store50_Ok}">
+                    <TextBlock x:Name="store50_Ok" Width="80" Height="80" Text="50" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store51_Ok}">
+                    <TextBlock x:Name="store51_Ok" Width="80" Height="80" Text="51" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store52_Ok}">
+                    <TextBlock x:Name="store52_Ok" Width="80" Height="80" Text="52" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store53_Ok}">
+                    <TextBlock x:Name="store53_Ok" Width="80" Height="80" Text="53" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store54_Ok}">
+                    <TextBlock x:Name="store54_Ok" Width="80" Height="80" Text="54" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store55_Ok}">
+                    <TextBlock x:Name="store55_Ok" Width="80" Height="80" Text="55" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store56_Ok}">
+                    <TextBlock x:Name="store56_Ok" Width="80" Height="80" Text="56" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store57_Ok}">
+                    <TextBlock x:Name="store57_Ok" Width="80" Height="80" Text="57" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store58_Ok}">
+                    <TextBlock x:Name="store58_Ok" Width="80" Height="80" Text="58" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store59_Ok}">
+                    <TextBlock x:Name="store59_Ok" Width="80" Height="80" Text="59" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store60_Ok}">
+                    <TextBlock x:Name="store60_Ok" Width="80" Height="80" Text="60" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store61_Ok}">
+                    <TextBlock x:Name="store61_Ok" Width="80" Height="80" Text="61" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store62_Ok}">
+                    <TextBlock x:Name="store62_Ok" Width="80" Height="80" Text="62" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store63_Ok}">
+                    <TextBlock x:Name="store63_Ok" Width="80" Height="80" Text="63" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store64_Ok}">
+                    <TextBlock x:Name="store64_Ok" Width="80" Height="80" Text="64" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store65_Ok}">
+                    <TextBlock x:Name="store65_Ok" Width="80" Height="80" Text="65" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store66_Ok}">
+                    <TextBlock x:Name="store66_Ok" Width="80" Height="80" Text="66" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store67_Ok}">
+                    <TextBlock x:Name="store67_Ok" Width="80" Height="80" Text="67" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store68_Ok}">
+                    <TextBlock x:Name="store68_Ok" Width="80" Height="80" Text="68" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store72_Ok}">
+                    <TextBlock x:Name="store72_Ok" Width="80" Height="80" Text="72" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store73_Ok}">
+                    <TextBlock x:Name="store73_Ok" Width="80" Height="80" Text="73" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store75_Ok}">
+                    <TextBlock x:Name="store75_Ok" Width="80" Height="80" Text="75" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store78_Ok}">
+                    <TextBlock x:Name="store78_Ok" Width="80" Height="80" Text="78" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store81_Ok}">
+                    <TextBlock x:Name="store81_Ok" Width="80" Height="80" Text="81" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store90_Ok}">
+                    <TextBlock x:Name="store90_Ok" Width="80" Height="80" Text="90" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                </Border>
+            </StackPanel>
+        </Canvas>
+        <Label Grid.Row="1" Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Canvas x:Name="canvasWarning" Grid.Row="2" Background="Yellow" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SizeChanged="canvasWarning_SizeChanged">
+            <StackPanel x:Name="panelWarning" Orientation="Horizontal" Width="{Binding PanelWarningWidth, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Height="130" Canvas.Left="{Binding CanvasLeftWarning, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Loaded="panel_Loaded">
+                <StackPanel.Resources>
+                    <Storyboard x:Key="slide2">
+                        <DoubleAnimation From="0" To="1" Duration="{Binding TimeWarning, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                      Storyboard.TargetProperty="X"
+                      Storyboard.TargetName="transferCurreny2"
+                      RepeatBehavior="Forever"/>
+                    </Storyboard>
+                </StackPanel.Resources>
+                <StackPanel.RenderTransform>
+                    <TranslateTransform x:Name="transferCurreny2" X="0"/>
+                </StackPanel.RenderTransform>
+                <StackPanel.Triggers>
+                    <EventTrigger RoutedEvent="StackPanel.Loaded">
+                        <BeginStoryboard Storyboard="{StaticResource slide2}" />
+                    </EventTrigger>
+                </StackPanel.Triggers>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store01_Warning}">
+                    <TextBlock x:Name="store01_Warning" Width="80" Height="80" Text="01" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store02_Warning}">
+                    <TextBlock x:Name="store02_Warning" Width="80" Height="80" Text="02" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store03_Warning}">
+                    <TextBlock x:Name="store03_Warning" Width="80" Height="80" Text="03" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store04_Warning}">
+                    <TextBlock x:Name="store04_Warning" Width="80" Height="80" Text="04" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store05_Warning}">
+                    <TextBlock x:Name="store05_Warning" Width="80" Height="80" Text="05" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store06_Warning}">
+                    <TextBlock x:Name="store06_Warning" Width="80" Height="80" Text="06" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store07_Warning}">
+                    <TextBlock x:Name="store07_Warning" Width="80" Height="80" Text="07" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store08_Warning}">
+                    <TextBlock x:Name="store08_Warning" Width="80" Height="80" Text="08" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store09_Warning}">
+                    <TextBlock x:Name="store09_Warning" Width="80" Height="80" Text="09" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store10_Warning}">
+                    <TextBlock x:Name="store10_Warning" Width="80" Height="80" Text="10" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store12_Warning}">
+                    <TextBlock x:Name="store12_Warning" Width="80" Height="80" Text="12" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store13_Warning}">
+                    <TextBlock x:Name="store13_Warning" Width="80" Height="80" Text="13" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store14_Warning}">
+                    <TextBlock x:Name="store14_Warning" Width="80" Height="80" Text="14" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store15_Warning}">
+                    <TextBlock x:Name="store15_Warning" Width="80" Height="80" Text="15" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store16_Warning}">
+                    <TextBlock x:Name="store16_Warning" Width="80" Height="80" Text="16" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store18_Warning}">
+                    <TextBlock x:Name="store18_Warning" Width="80" Height="80" Text="18" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store19_Warning}">
+                    <TextBlock x:Name="store19_Warning" Width="80" Height="80" Text="19" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store20_Warning}">
+                    <TextBlock x:Name="store20_Warning" Width="80" Height="80" Text="20" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store21_Warning}">
+                    <TextBlock x:Name="store21_Warning" Width="80" Height="80" Text="21" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store22_Warning}">
+                    <TextBlock x:Name="store22_Warning" Width="80" Height="80" Text="22" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store23_Warning}">
+                    <TextBlock x:Name="store23_Warning" Width="80" Height="80" Text="23" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store24_Warning}">
+                    <TextBlock x:Name="store24_Warning" Width="80" Height="80" Text="24" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store26_Warning}">
+                    <TextBlock x:Name="store26_Warning" Width="80" Height="80" Text="26" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store27_Warning}">
+                    <TextBlock x:Name="store27_Warning" Width="80" Height="80" Text="27" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store28_Warning}">
+                    <TextBlock x:Name="store28_Warning" Width="80" Height="80" Text="28" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store30_Warning}">
+                    <TextBlock x:Name="store30_Warning" Width="80" Height="80" Text="30" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store31_Warning}">
+                    <TextBlock x:Name="store31_Warning" Width="80" Height="80" Text="31" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store32_Warning}">
+                    <TextBlock x:Name="store32_Warning" Width="80" Height="80" Text="32" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store33_Warning}">
+                    <TextBlock x:Name="store33_Warning" Width="80" Height="80" Text="33" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store34_Warning}">
+                    <TextBlock x:Name="store34_Warning" Width="80" Height="80" Text="34" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store35_Warning}">
+                    <TextBlock x:Name="store35_Warning" Width="80" Height="80" Text="35" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store36_Warning}">
+                    <TextBlock x:Name="store36_Warning" Width="80" Height="80" Text="36" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store37_Warning}">
+                    <TextBlock x:Name="store37_Warning" Width="80" Height="80" Text="37" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store38_Warning}">
+                    <TextBlock x:Name="store38_Warning" Width="80" Height="80" Text="38" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store39_Warning}">
+                    <TextBlock x:Name="store39_Warning" Width="80" Height="80" Text="39" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store40_Warning}">
+                    <TextBlock x:Name="store40_Warning" Width="80" Height="80" Text="40" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store41_Warning}">
+                    <TextBlock x:Name="store41_Warning" Width="80" Height="80" Text="41" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store42_Warning}">
+                    <TextBlock x:Name="store42_Warning" Width="80" Height="80" Text="42" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store43_Warning}">
+                    <TextBlock x:Name="store43_Warning" Width="80" Height="80" Text="43" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store44_Warning}">
+                    <TextBlock x:Name="store44_Warning" Width="80" Height="80" Text="44" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store45_Warning}">
+                    <TextBlock x:Name="store45_Warning" Width="80" Height="80" Text="45" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store46_Warning}">
+                    <TextBlock x:Name="store46_Warning" Width="80" Height="80" Text="46" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store47_Warning}">
+                    <TextBlock x:Name="store47_Warning" Width="80" Height="80" Text="47" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store48_Warning}">
+                    <TextBlock x:Name="store48_Warning" Width="80" Height="80" Text="48" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store50_Warning}">
+                    <TextBlock x:Name="store50_Warning" Width="80" Height="80" Text="50" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store51_Warning}">
+                    <TextBlock x:Name="store51_Warning" Width="80" Height="80" Text="51" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store52_Warning}">
+                    <TextBlock x:Name="store52_Warning" Width="80" Height="80" Text="52" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store53_Warning}">
+                    <TextBlock x:Name="store53_Warning" Width="80" Height="80" Text="53" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store54_Warning}">
+                    <TextBlock x:Name="store54_Warning" Width="80" Height="80" Text="54" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store55_Warning}">
+                    <TextBlock x:Name="store55_Warning" Width="80" Height="80" Text="55" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store56_Warning}">
+                    <TextBlock x:Name="store56_Warning" Width="80" Height="80" Text="56" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store57_Warning}">
+                    <TextBlock x:Name="store57_Warning" Width="80" Height="80" Text="57" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store58_Warning}">
+                    <TextBlock x:Name="store58_Warning" Width="80" Height="80" Text="58" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store59_Warning}">
+                    <TextBlock x:Name="store59_Warning" Width="80" Height="80" Text="59" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store60_Warning}">
+                    <TextBlock x:Name="store60_Warning" Width="80" Height="80" Text="60" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store61_Warning}">
+                    <TextBlock x:Name="store61_Warning" Width="80" Height="80" Text="61" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store62_Warning}">
+                    <TextBlock x:Name="store62_Warning" Width="80" Height="80" Text="62" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store63_Warning}">
+                    <TextBlock x:Name="store63_Warning" Width="80" Height="80" Text="63" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store64_Warning}">
+                    <TextBlock x:Name="store64_Warning" Width="80" Height="80" Text="64" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store65_Warning}">
+                    <TextBlock x:Name="store65_Warning" Width="80" Height="80" Text="65" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store66_Warning}">
+                    <TextBlock x:Name="store66_Warning" Width="80" Height="80" Text="66" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store67_Warning}">
+                    <TextBlock x:Name="store67_Warning" Width="80" Height="80" Text="67" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store68_Warning}">
+                    <TextBlock x:Name="store68_Warning" Width="80" Height="80" Text="68" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store72_Warning}">
+                    <TextBlock x:Name="store72_Warning" Width="80" Height="80" Text="72" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store73_Warning}">
+                    <TextBlock x:Name="store73_Warning" Width="80" Height="80" Text="73" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store75_Warning}">
+                    <TextBlock x:Name="store75_Warning" Width="80" Height="80" Text="75" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store78_Warning}">
+                    <TextBlock x:Name="store78_Warning" Width="80" Height="80" Text="78" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store81_Warning}">
+                    <TextBlock x:Name="store81_Warning" Width="80" Height="80" Text="81" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store90_Warning}">
+                    <TextBlock x:Name="store90_Warning" Width="80" Height="80" Text="90" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+            </StackPanel>
+        </Canvas>
+        <Label Grid.Row="3" Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Canvas x:Name="canvasDisconnected" Grid.Row="4" Background="Coral" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SizeChanged="canvasDisconnected_SizeChanged">
+            <StackPanel x:Name="panelDisconnected" Orientation="Horizontal" Height="130"  Width="{Binding PanelDisconnectedWidth, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Left="{Binding CanvasLeftDisconnected, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Loaded="panel_Loaded">
+                <StackPanel.Resources>
+                    <Storyboard x:Key="slide3">
+                        <DoubleAnimation From="0" To="1" Duration="{Binding TimeDisconnected, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                      Storyboard.TargetProperty="X"
+                      Storyboard.TargetName="transferCurreny3"
+                      RepeatBehavior="Forever"/>
+                    </Storyboard>
+                </StackPanel.Resources>
+                <StackPanel.RenderTransform>
+                    <TranslateTransform x:Name="transferCurreny3" X="0"/>
+                </StackPanel.RenderTransform>
+                <StackPanel.Triggers>
+                    <EventTrigger RoutedEvent="StackPanel.Loaded">
+                        <BeginStoryboard Storyboard="{StaticResource slide3}" />
+                    </EventTrigger>
+                </StackPanel.Triggers>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store01_Fatal}">
+                    <TextBlock x:Name="store01_Fatal" Width="80" Height="80" Text="01" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store02_Fatal}">
+                    <TextBlock x:Name="store02_Fatal" Width="80" Height="80" Text="02" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store03_Fatal}">
+                    <TextBlock x:Name="store03_Fatal" Width="80" Height="80" Text="03" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store04_Fatal}">
+                    <TextBlock x:Name="store04_Fatal" Width="80" Height="80" Text="04" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store05_Fatal}">
+                    <TextBlock x:Name="store05_Fatal" Width="80" Height="80" Text="05" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store06_Fatal}">
+                    <TextBlock x:Name="store06_Fatal" Width="80" Height="80" Text="06" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store07_Fatal}">
+                    <TextBlock x:Name="store07_Fatal" Width="80" Height="80" Text="07" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store08_Fatal}">
+                    <TextBlock x:Name="store08_Fatal" Width="80" Height="80" Text="08" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store09_Fatal}">
+                    <TextBlock x:Name="store09_Fatal" Width="80" Height="80" Text="09" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store10_Fatal}">
+                    <TextBlock x:Name="store10_Fatal" Width="80" Height="80" Text="10" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store12_Fatal}">
+                    <TextBlock x:Name="store12_Fatal" Width="80" Height="80" Text="12" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store13_Fatal}">
+                    <TextBlock x:Name="store13_Fatal" Width="80" Height="80" Text="13" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store14_Fatal}">
+                    <TextBlock x:Name="store14_Fatal" Width="80" Height="80" Text="14" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store15_Fatal}">
+                    <TextBlock x:Name="store15_Fatal" Width="80" Height="80" Text="15" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store16_Fatal}">
+                    <TextBlock x:Name="store16_Fatal" Width="80" Height="80" Text="16" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store18_Fatal}">
+                    <TextBlock x:Name="store18_Fatal" Width="80" Height="80" Text="18" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store19_Fatal}">
+                    <TextBlock x:Name="store19_Fatal" Width="80" Height="80" Text="19" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store20_Fatal}">
+                    <TextBlock x:Name="store20_Fatal" Width="80" Height="80" Text="20" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store21_Fatal}">
+                    <TextBlock x:Name="store21_Fatal" Width="80" Height="80" Text="21" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store22_Fatal}">
+                    <TextBlock x:Name="store22_Fatal" Width="80" Height="80" Text="22" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store23_Fatal}">
+                    <TextBlock x:Name="store23_Fatal" Width="80" Height="80" Text="23" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store24_Fatal}">
+                    <TextBlock x:Name="store24_Fatal" Width="80" Height="80" Text="24" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store26_Fatal}">
+                    <TextBlock x:Name="store26_Fatal" Width="80" Height="80" Text="26" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store27_Fatal}">
+                    <TextBlock x:Name="store27_Fatal" Width="80" Height="80" Text="27" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store28_Fatal}">
+                    <TextBlock x:Name="store28_Fatal" Width="80" Height="80" Text="28" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store30_Fatal}">
+                    <TextBlock x:Name="store30_Fatal" Width="80" Height="80" Text="30" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store31_Fatal}">
+                    <TextBlock x:Name="store31_Fatal" Width="80" Height="80" Text="31" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store32_Fatal}">
+                    <TextBlock x:Name="store32_Fatal" Width="80" Height="80" Text="32" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store33_Fatal}">
+                    <TextBlock x:Name="store33_Fatal" Width="80" Height="80" Text="33" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store34_Fatal}">
+                    <TextBlock x:Name="store34_Fatal" Width="80" Height="80" Text="34" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store35_Fatal}">
+                    <TextBlock x:Name="store35_Fatal" Width="80" Height="80" Text="35" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store36_Fatal}">
+                    <TextBlock x:Name="store36_Fatal" Width="80" Height="80" Text="36" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store37_Fatal}">
+                    <TextBlock x:Name="store37_Fatal" Width="80" Height="80" Text="37" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store38_Fatal}">
+                    <TextBlock x:Name="store38_Fatal" Width="80" Height="80" Text="38" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store39_Fatal}">
+                    <TextBlock x:Name="store39_Fatal" Width="80" Height="80" Text="39" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store40_Fatal}">
+                    <TextBlock x:Name="store40_Fatal" Width="80" Height="80" Text="40" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store41_Fatal}">
+                    <TextBlock x:Name="store41_Fatal" Width="80" Height="80" Text="41" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store42_Fatal}">
+                    <TextBlock x:Name="store42_Fatal" Width="80" Height="80" Text="42" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store43_Fatal}">
+                    <TextBlock x:Name="store43_Fatal" Width="80" Height="80" Text="43" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store44_Fatal}">
+                    <TextBlock x:Name="store44_Fatal" Width="80" Height="80" Text="44" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store45_Fatal}">
+                    <TextBlock x:Name="store45_Fatal" Width="80" Height="80" Text="45" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store46_Fatal}">
+                    <TextBlock x:Name="store46_Fatal" Width="80" Height="80" Text="46" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store47_Fatal}">
+                    <TextBlock x:Name="store47_Fatal" Width="80" Height="80" Text="47" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store48_Fatal}">
+                    <TextBlock x:Name="store48_Fatal" Width="80" Height="80" Text="48" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store50_Fatal}">
+                    <TextBlock x:Name="store50_Fatal" Width="80" Height="80" Text="50" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store51_Fatal}">
+                    <TextBlock x:Name="store51_Fatal" Width="80" Height="80" Text="51" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store52_Fatal}">
+                    <TextBlock x:Name="store52_Fatal" Width="80" Height="80" Text="52" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store53_Fatal}">
+                    <TextBlock x:Name="store53_Fatal" Width="80" Height="80" Text="53" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store54_Fatal}">
+                    <TextBlock x:Name="store54_Fatal" Width="80" Height="80" Text="54" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store55_Fatal}">
+                    <TextBlock x:Name="store55_Fatal" Width="80" Height="80" Text="55" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store56_Fatal}">
+                    <TextBlock x:Name="store56_Fatal" Width="80" Height="80" Text="56" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store57_Fatal}">
+                    <TextBlock x:Name="store57_Fatal" Width="80" Height="80" Text="57" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store58_Fatal}">
+                    <TextBlock x:Name="store58_Fatal" Width="80" Height="80" Text="58" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store59_Fatal}">
+                    <TextBlock x:Name="store59_Fatal" Width="80" Height="80" Text="59" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store60_Fatal}">
+                    <TextBlock x:Name="store60_Fatal" Width="80" Height="80" Text="60" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store61_Fatal}">
+                    <TextBlock x:Name="store61_Fatal" Width="80" Height="80" Text="61" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store62_Fatal}">
+                    <TextBlock x:Name="store62_Fatal" Width="80" Height="80" Text="62" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store63_Fatal}">
+                    <TextBlock x:Name="store63_Fatal" Width="80" Height="80" Text="63" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store64_Fatal}">
+                    <TextBlock x:Name="store64_Fatal" Width="80" Height="80" Text="64" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store65_Fatal}">
+                    <TextBlock x:Name="store65_Fatal" Width="80" Height="80" Text="65" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store66_Fatal}">
+                    <TextBlock x:Name="store66_Fatal" Width="80" Height="80" Text="66" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store67_Fatal}">
+                    <TextBlock x:Name="store67_Fatal" Width="80" Height="80" Text="67" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store68_Fatal}">
+                    <TextBlock x:Name="store68_Fatal" Width="80" Height="80" Text="68" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store72_Fatal}">
+                    <TextBlock x:Name="store72_Fatal" Width="80" Height="80" Text="72" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store73_Fatal}">
+                    <TextBlock x:Name="store73_Fatal" Width="80" Height="80" Text="73" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store75_Fatal}">
+                    <TextBlock x:Name="store75_Fatal" Width="80" Height="80" Text="75" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store78_Fatal}">
+                    <TextBlock x:Name="store78_Fatal" Width="80" Height="80" Text="78" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store81_Fatal}">
+                    <TextBlock x:Name="store81_Fatal" Width="80" Height="80" Text="81" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+                <Border BorderThickness="2" BorderBrush="Black" Width="80" Height="80" Margin="20" Visibility="{Binding Visibility, ElementName=store90_Fatal}">
+                    <TextBlock x:Name="store90_Fatal" Width="80" Height="80" Text="90" FontSize="50" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                </Border>
+            </StackPanel>
+        </Canvas>
+        <Label Grid.Row="5" Background="Beige" Content="{Binding StatusServer, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
+    </Grid>
+</Window>
