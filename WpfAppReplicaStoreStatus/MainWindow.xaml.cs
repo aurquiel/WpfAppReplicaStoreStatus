@@ -2031,7 +2031,7 @@ namespace WpfAppReplicaStoreStatus
                     }
                 }
 
-                _dataMain.StatusServer = "CONEXION SERVIDOR EXITOSA";
+                _dataMain.StatusServer = "CONEXION SERVIDOR: EXITOSA";
 
                 _backgroundWorker.ReportProgress(0, Stores.ListOfStores);
             }
@@ -2043,7 +2043,7 @@ namespace WpfAppReplicaStoreStatus
                     item.Updated = true;
                 }
 
-                _dataMain.StatusServer = "CONEXION SERVIDOR FALLIDA";
+                _dataMain.StatusServer = "CONEXION SERVIDOR: FALLIDA";
 
                 _backgroundWorker.ReportProgress(0, Stores.ListOfStores);
             }
