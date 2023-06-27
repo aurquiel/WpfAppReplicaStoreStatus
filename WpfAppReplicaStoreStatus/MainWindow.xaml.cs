@@ -130,7 +130,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store01_Ok.Visibility = Visibility.Visible;
-                        store01code_Ok.Text = store.CodeOfStatus;
                         store01_Warning.Visibility = Visibility.Collapsed;
                         store01_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -155,7 +154,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store02_Ok.Visibility = Visibility.Visible;
-                        store02code_Ok.Text = store.CodeOfStatus;
                         store02_Warning.Visibility = Visibility.Collapsed;
                         store02_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -180,7 +178,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store03_Ok.Visibility = Visibility.Visible;
-                        store03code_Ok.Text = store.CodeOfStatus;
                         store03_Warning.Visibility = Visibility.Collapsed;
                         store03_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -205,7 +202,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store04_Ok.Visibility = Visibility.Visible;
-                        store04code_Ok.Text = store.CodeOfStatus;
                         store04_Warning.Visibility = Visibility.Collapsed;
                         store04_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -230,7 +226,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store05_Ok.Visibility = Visibility.Visible;
-                        store05code_Ok.Text = store.CodeOfStatus;
                         store05_Warning.Visibility = Visibility.Collapsed;
                         store05_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -255,7 +250,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store06_Ok.Visibility = Visibility.Visible;
-                        store06code_Ok.Text = store.CodeOfStatus;
                         store06_Warning.Visibility = Visibility.Collapsed;
                         store06_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -280,7 +274,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store07_Ok.Visibility = Visibility.Visible;
-                        store07code_Ok.Text = store.CodeOfStatus;
                         store07_Warning.Visibility = Visibility.Collapsed;
                         store07_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -305,7 +298,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store08_Ok.Visibility = Visibility.Visible;
-                        store08code_Ok.Text = store.CodeOfStatus;
                         store08_Warning.Visibility = Visibility.Collapsed;
                         store08_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -330,7 +322,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store09_Ok.Visibility = Visibility.Visible;
-                        store09code_Ok.Text = store.CodeOfStatus;
                         store09_Warning.Visibility = Visibility.Collapsed;
                         store09_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -355,7 +346,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store10_Ok.Visibility = Visibility.Visible;
-                        store10code_Ok.Text = store.CodeOfStatus;
                         store10_Warning.Visibility = Visibility.Collapsed;
                         store10_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -380,7 +370,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store12_Ok.Visibility = Visibility.Visible;
-                        store12code_Ok.Text = store.CodeOfStatus;
                         store12_Warning.Visibility = Visibility.Collapsed;
                         store12_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -405,7 +394,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store13_Ok.Visibility = Visibility.Visible;
-                        store13code_Ok.Text = store.CodeOfStatus;
                         store13_Warning.Visibility = Visibility.Collapsed;
                         store13_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -430,7 +418,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store14_Ok.Visibility = Visibility.Visible;
-                        store14code_Ok.Text = store.CodeOfStatus;
                         store14_Warning.Visibility = Visibility.Collapsed;
                         store14_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -455,7 +442,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store15_Ok.Visibility = Visibility.Visible;
-                        store15code_Ok.Text = store.CodeOfStatus;
                         store15_Warning.Visibility = Visibility.Collapsed;
                         store15_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -480,7 +466,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store16_Ok.Visibility = Visibility.Visible;
-                        store16code_Ok.Text = store.CodeOfStatus;
                         store16_Warning.Visibility = Visibility.Collapsed;
                         store16_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -505,7 +490,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store18_Ok.Visibility = Visibility.Visible;
-                        store18code_Ok.Text = store.CodeOfStatus;
                         store18_Warning.Visibility = Visibility.Collapsed;
                         store18_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -531,7 +515,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store19_Ok.Visibility = Visibility.Visible;
-                        store19code_Ok.Text = store.CodeOfStatus;
                         store19_Warning.Visibility = Visibility.Collapsed;
                         store19_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -557,7 +540,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store20_Ok.Visibility = Visibility.Visible;
-                        store20code_Ok.Text = store.CodeOfStatus;
                         store20_Warning.Visibility = Visibility.Collapsed;
                         store20_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -583,7 +565,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store21_Ok.Visibility = Visibility.Visible;
-                        store21code_Ok.Text = store.CodeOfStatus;
                         store21_Warning.Visibility = Visibility.Collapsed;
                         store21_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -609,7 +590,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store22_Ok.Visibility = Visibility.Visible;
-                        store22code_Ok.Text = store.CodeOfStatus;
                         store22_Warning.Visibility = Visibility.Collapsed;
                         store22_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -635,7 +615,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store23_Ok.Visibility = Visibility.Visible;
-                        store23code_Ok.Text = store.CodeOfStatus;
                         store23_Warning.Visibility = Visibility.Collapsed;
                         store23_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -661,7 +640,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store24_Ok.Visibility = Visibility.Visible;
-                        store24code_Ok.Text = store.CodeOfStatus;
                         store24_Warning.Visibility = Visibility.Collapsed;
                         store24_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -686,7 +664,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store26_Ok.Visibility = Visibility.Visible;
-                        store26code_Ok.Text = store.CodeOfStatus;
                         store26_Warning.Visibility = Visibility.Collapsed;
                         store26_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -712,7 +689,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store27_Ok.Visibility = Visibility.Visible;
-                        store27code_Ok.Text = store.CodeOfStatus;
                         store27_Warning.Visibility = Visibility.Collapsed;
                         store27_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -738,7 +714,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store28_Ok.Visibility = Visibility.Visible;
-                        store28code_Ok.Text = store.CodeOfStatus;
                         store28_Warning.Visibility = Visibility.Collapsed;
                         store28_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -763,7 +738,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store30_Ok.Visibility = Visibility.Visible;
-                        store30code_Ok.Text = store.CodeOfStatus;
                         store30_Warning.Visibility = Visibility.Collapsed;
                         store30_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -789,7 +763,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store31_Ok.Visibility = Visibility.Visible;
-                        store31code_Ok.Text = store.CodeOfStatus;
                         store31_Warning.Visibility = Visibility.Collapsed;
                         store31_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -815,7 +788,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store32_Ok.Visibility = Visibility.Visible;
-                        store32code_Ok.Text = store.CodeOfStatus;
                         store32_Warning.Visibility = Visibility.Collapsed;
                         store32_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -841,7 +813,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store33_Ok.Visibility = Visibility.Visible;
-                        store33code_Ok.Text = store.CodeOfStatus;
                         store33_Warning.Visibility = Visibility.Collapsed;
                         store33_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -867,7 +838,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store34_Ok.Visibility = Visibility.Visible;
-                        store34code_Ok.Text = store.CodeOfStatus;
                         store34_Warning.Visibility = Visibility.Collapsed;
                         store34_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -893,7 +863,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store35_Ok.Visibility = Visibility.Visible;
-                        store35code_Ok.Text = store.CodeOfStatus;
                         store35_Warning.Visibility = Visibility.Collapsed;
                         store35_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -919,7 +888,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store36_Ok.Visibility = Visibility.Visible;
-                        store36code_Ok.Text = store.CodeOfStatus;
                         store36_Warning.Visibility = Visibility.Collapsed;
                         store36_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -945,7 +913,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store37_Ok.Visibility = Visibility.Visible;
-                        store37code_Ok.Text = store.CodeOfStatus;
                         store37_Warning.Visibility = Visibility.Collapsed;
                         store37_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -971,7 +938,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store38_Ok.Visibility = Visibility.Visible;
-                        store38code_Ok.Text = store.CodeOfStatus;
                         store38_Warning.Visibility = Visibility.Collapsed;
                         store38_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -997,7 +963,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store39_Ok.Visibility = Visibility.Visible;
-                        store39code_Ok.Text = store.CodeOfStatus;
                         store39_Warning.Visibility = Visibility.Collapsed;
                         store39_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1023,7 +988,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store40_Ok.Visibility = Visibility.Visible;
-                        store40code_Ok.Text = store.CodeOfStatus;
                         store40_Warning.Visibility = Visibility.Collapsed;
                         store40_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1049,7 +1013,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store41_Ok.Visibility = Visibility.Visible;
-                        store41code_Ok.Text = store.CodeOfStatus;
                         store41_Warning.Visibility = Visibility.Collapsed;
                         store41_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1075,7 +1038,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store42_Ok.Visibility = Visibility.Visible;
-                        store42code_Ok.Text = store.CodeOfStatus;
                         store42_Warning.Visibility = Visibility.Collapsed;
                         store42_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1101,7 +1063,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store43_Ok.Visibility = Visibility.Visible;
-                        store43code_Ok.Text = store.CodeOfStatus;
                         store43_Warning.Visibility = Visibility.Collapsed;
                         store43_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1127,7 +1088,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store44_Ok.Visibility = Visibility.Visible;
-                        store44code_Ok.Text = store.CodeOfStatus;
                         store44_Warning.Visibility = Visibility.Collapsed;
                         store44_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1153,7 +1113,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store45_Ok.Visibility = Visibility.Visible;
-                        store45code_Ok.Text = store.CodeOfStatus;
                         store45_Warning.Visibility = Visibility.Collapsed;
                         store45_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1179,7 +1138,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store46_Ok.Visibility = Visibility.Visible;
-                        store46code_Ok.Text = store.CodeOfStatus;
                         store46_Warning.Visibility = Visibility.Collapsed;
                         store46_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1205,7 +1163,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store47_Ok.Visibility = Visibility.Visible;
-                        store47code_Ok.Text = store.CodeOfStatus;
                         store47_Warning.Visibility = Visibility.Collapsed;
                         store47_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1231,7 +1188,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store48_Ok.Visibility = Visibility.Visible;
-                        store48code_Ok.Text = store.CodeOfStatus;
                         store48_Warning.Visibility = Visibility.Collapsed;
                         store48_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1256,7 +1212,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store50_Ok.Visibility = Visibility.Visible;
-                        store50code_Ok.Text = store.CodeOfStatus;
                         store50_Warning.Visibility = Visibility.Collapsed;
                         store50_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1281,7 +1236,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store51_Ok.Visibility = Visibility.Visible;
-                        store51code_Ok.Text = store.CodeOfStatus;
                         store51_Warning.Visibility = Visibility.Collapsed;
                         store51_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1306,7 +1260,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store52_Ok.Visibility = Visibility.Visible;
-                        store52code_Ok.Text = store.CodeOfStatus;
                         store52_Warning.Visibility = Visibility.Collapsed;
                         store52_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1331,7 +1284,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store53_Ok.Visibility = Visibility.Visible;
-                        store53code_Ok.Text = store.CodeOfStatus;
                         store53_Warning.Visibility = Visibility.Collapsed;
                         store53_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1356,7 +1308,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store54_Ok.Visibility = Visibility.Visible;
-                        store54code_Ok.Text = store.CodeOfStatus;
                         store54_Warning.Visibility = Visibility.Collapsed;
                         store54_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1381,7 +1332,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store55_Ok.Visibility = Visibility.Visible;
-                        store55code_Ok.Text = store.CodeOfStatus;
                         store55_Warning.Visibility = Visibility.Collapsed;
                         store55_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1406,7 +1356,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store56_Ok.Visibility = Visibility.Visible;
-                        store56code_Ok.Text = store.CodeOfStatus;
                         store56_Warning.Visibility = Visibility.Collapsed;
                         store56_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1431,7 +1380,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store57_Ok.Visibility = Visibility.Visible;
-                        store57code_Ok.Text = store.CodeOfStatus;
                         store57_Warning.Visibility = Visibility.Collapsed;
                         store57_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1456,7 +1404,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store58_Ok.Visibility = Visibility.Visible;
-                        store58code_Ok.Text = store.CodeOfStatus;
                         store58_Warning.Visibility = Visibility.Collapsed;
                         store58_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1481,7 +1428,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store59_Ok.Visibility = Visibility.Visible;
-                        store59code_Ok.Text = store.CodeOfStatus;
                         store59_Warning.Visibility = Visibility.Collapsed;
                         store59_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1506,7 +1452,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store60_Ok.Visibility = Visibility.Visible;
-                        store60code_Ok.Text = store.CodeOfStatus;
                         store60_Warning.Visibility = Visibility.Collapsed;
                         store60_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1531,7 +1476,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store61_Ok.Visibility = Visibility.Visible;
-                        store61code_Ok.Text = store.CodeOfStatus;
                         store61_Warning.Visibility = Visibility.Collapsed;
                         store61_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1556,7 +1500,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store62_Ok.Visibility = Visibility.Visible;
-                        store62code_Ok.Text = store.CodeOfStatus;
                         store62_Warning.Visibility = Visibility.Collapsed;
                         store62_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1581,7 +1524,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store63_Ok.Visibility = Visibility.Visible;
-                        store63code_Ok.Text = store.CodeOfStatus;
                         store63_Warning.Visibility = Visibility.Collapsed;
                         store63_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1606,7 +1548,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store64_Ok.Visibility = Visibility.Visible;
-                        store64code_Ok.Text = store.CodeOfStatus;
                         store64_Warning.Visibility = Visibility.Collapsed;
                         store64_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1631,7 +1572,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store65_Ok.Visibility = Visibility.Visible;
-                        store65code_Ok.Text = store.CodeOfStatus;
                         store65_Warning.Visibility = Visibility.Collapsed;
                         store65_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1656,7 +1596,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store66_Ok.Visibility = Visibility.Visible;
-                        store66code_Ok.Text = store.CodeOfStatus;
                         store66_Warning.Visibility = Visibility.Collapsed;
                         store66_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1681,7 +1620,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store67_Ok.Visibility = Visibility.Visible;
-                        store67code_Ok.Text = store.CodeOfStatus;
                         store67_Warning.Visibility = Visibility.Collapsed;
                         store67_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1706,7 +1644,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store68_Ok.Visibility = Visibility.Visible;
-                        store68code_Ok.Text = store.CodeOfStatus;
                         store68_Warning.Visibility = Visibility.Collapsed;
                         store68_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1731,7 +1668,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store72_Ok.Visibility = Visibility.Visible;
-                        store72code_Ok.Text = store.CodeOfStatus;
                         store72_Warning.Visibility = Visibility.Collapsed;
                         store72_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1756,7 +1692,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store73_Ok.Visibility = Visibility.Visible;
-                        store73code_Ok.Text = store.CodeOfStatus;
                         store73_Warning.Visibility = Visibility.Collapsed;
                         store73_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1781,7 +1716,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store75_Ok.Visibility = Visibility.Visible;
-                        store75code_Ok.Text = store.CodeOfStatus;
                         store75_Warning.Visibility = Visibility.Collapsed;
                         store75_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1806,7 +1740,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store78_Ok.Visibility = Visibility.Visible;
-                        store78code_Ok.Text = store.CodeOfStatus;
                         store78_Warning.Visibility = Visibility.Collapsed;
                         store78_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1831,7 +1764,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store81_Ok.Visibility = Visibility.Visible;
-                        store81code_Ok.Text = store.CodeOfStatus;
                         store81_Warning.Visibility = Visibility.Collapsed;
                         store81_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1856,7 +1788,6 @@ namespace WpfAppReplicaStoreStatus
                     if (store.Status == Stores.STATUS.OK)
                     {
                         store90_Ok.Visibility = Visibility.Visible;
-                        store90code_Ok.Text = store.CodeOfStatus;
                         store90_Warning.Visibility = Visibility.Collapsed;
                         store90_Fatal.Visibility = Visibility.Collapsed;
                     }
@@ -1890,7 +1821,6 @@ namespace WpfAppReplicaStoreStatus
             var filterCode = storesNewStatus.DistinctBy(x => x.CodeOfStatus).Where(x => x.CodeOfStatus != "0");
 
             ListBoxMessage.Items.Clear();
-            ListBoxMessage.Items.Add("Codigo: 0 Mensaje: No errror");
             foreach (var x in filterCode)
             {
                 ListBoxMessage.Items.Add("Codigo: " + x.CodeOfStatus + " Mensaje: " + x.Message);
