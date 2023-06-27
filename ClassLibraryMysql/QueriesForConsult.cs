@@ -57,7 +57,7 @@ namespace ClassLibraryMysql
             }
         }
 
-        public async Task<DataTable> GetStoresTableInfo()
+        public async Task<DataTable> GetStoresStatusTableInfo()
         {
             DataTable dataTableFirst = await FirstBulk();
             DataTable dataTableSecond = await SecondBulk();

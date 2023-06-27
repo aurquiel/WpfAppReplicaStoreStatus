@@ -19,6 +19,7 @@ namespace ClassLibraryStores
 
         public CODE_OF_STORE CodeStore { get; set; }
         public STATUS Status { get; set; }
+        public string CodeOfStatus { get; set; }
         public string Message { get; set; }
         public bool Updated { get; set; }
 
@@ -27,10 +28,11 @@ namespace ClassLibraryStores
 
         }
 
-        public Stores(CODE_OF_STORE codeStore, STATUS status, string message, bool updated)
+        public Stores(CODE_OF_STORE codeStore, STATUS status, string codeOfStatus, string message, bool updated)
         {
             CodeStore = codeStore;
             Status = status;
+            CodeOfStatus = codeOfStatus;
             Message = message;
             Updated = updated;
         }
