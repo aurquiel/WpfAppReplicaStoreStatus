@@ -1094,7 +1094,7 @@
             </StackPanel>
         </Canvas>
         <Label Grid.Row="3" Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <Canvas x:Name="canvasDisconnected" Grid.Row="4" Background="Red" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SizeChanged="canvasDisconnected_SizeChanged">
+        <Canvas x:Name="canvasDisconnected" Grid.Row="4" Background="Gray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SizeChanged="canvasDisconnected_SizeChanged">
             <StackPanel x:Name="panelDisconnected" Orientation="Horizontal" Height="180"  Width="{Binding PanelDisconnectedWidth, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Canvas.Left="{Binding CanvasLeftDisconnected, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Loaded="panel_Loaded">
                 <StackPanel.Resources>
                     <Storyboard x:Key="slide3">
