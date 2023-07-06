@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Linq;
+using System.Media;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -1816,6 +1817,15 @@ namespace WpfAppReplicaStoreStatus
             return flagEdited;
         }
 
+        private void SoundNotificationFatal()
+        {
+            if (Stores.ListOfStores.Any(x => x.Status == Stores.STATUS.FATAL))
+            {
+                SoundPlayer soundPlayer = new SoundPlayer(Properties.Resources.notifiacationFatal);
+                soundPlayer.Play();
+            }
+        }
+
         private void UpdateListBoxMessage(List<Stores> storesNewStatus)
         {
             var filterCode = storesNewStatus.DistinctBy(x => x.CodeOfStatus).Where(x => x.CodeOfStatus != "0");
@@ -1864,6 +1874,7 @@ namespace WpfAppReplicaStoreStatus
 
             if (IsnewInfo)
             {
+                SoundNotificationFatal();
                 UpdateListBoxMessage(storesNewStatus);
                 UpdateAnimation();
             }
@@ -1891,7 +1902,7 @@ namespace WpfAppReplicaStoreStatus
             stores.Message = row[8].ToString();
         }
 
-        private void SetStatus(DataTable queryResult)
+        private void SetStatusFromDB(DataTable queryResult)
         {
             foreach (DataRow row in queryResult.Rows)
             {
@@ -2180,7 +2191,7 @@ namespace WpfAppReplicaStoreStatus
             {
                 QueriesForConsult queriesForConsult = new QueriesForConsult();
                 DataTable queryResult = await queriesForConsult.GetStoresStatusTableInfo();
-                SetStatus(queryResult);
+                SetStatusFromDB(queryResult);
                 _dataMain.StatusServer = "CONEXION SERVIDOR: EXITOSA";
                 _backgroundWorker.ReportProgress(0, Stores.ListOfStores);
             }
