@@ -4,6 +4,18 @@
              xmlns:local="clr-namespace:WpfAppReplicaStoreStatus"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary 
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:system="clr-namespace:System;assembly=mscorlib">    
+
+            <!-- String resource that can be localized -->
+            <system:Double x:Key="side">90</system:Double>
+            <system:Double x:Key="heigthSmallbox">50</system:Double>
+            <system:Double x:Key="fontSize">60</system:Double>
+            <system:Double x:Key="fontSizeSmallBox">30</system:Double>
+
+        </ResourceDictionary>
+
     </Application.Resources>
 </Application>

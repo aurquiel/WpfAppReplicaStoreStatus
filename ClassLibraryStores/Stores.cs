@@ -22,19 +22,21 @@ namespace ClassLibraryStores
         public string CodeOfStatus { get; set; }
         public string Message { get; set; }
         public bool Updated { get; set; }
+        public bool AlreadySong { get; set; }
 
         public Stores()
         {
 
         }
 
-        public Stores(CODE_OF_STORE codeStore, STATUS status, string codeOfStatus, string message, bool updated)
+        public Stores(CODE_OF_STORE codeStore, STATUS status, string codeOfStatus, string message, bool updated, bool alreadySong)
         {
             CodeStore = codeStore;
             Status = status;
             CodeOfStatus = codeOfStatus;
             Message = message;
             Updated = updated;
+            AlreadySong = alreadySong;  
         }
     }
 }

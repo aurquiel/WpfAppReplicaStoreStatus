@@ -25,6 +25,7 @@ namespace WpfAppReplicaStoreStatus
         private BackgroundWorker _backgroundWorker = new BackgroundWorker();
         private static bool IsFirstUpdate = false;
 
+
         public MainWindow()
         {
             InitializeComponent();
@@ -43,75 +44,75 @@ namespace WpfAppReplicaStoreStatus
 
         private void InitStores()
         {
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_01, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_02, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_03, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_04, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_05, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_06, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_07, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_08, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_09, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_10, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_12, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_13, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_14, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_15, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_16, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_18, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_19, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_20, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_21, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_22, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_23, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_24, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_26, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_27, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_28, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_30, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_31, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_32, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_33, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_34, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_35, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_36, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_37, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_38, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_39, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_40, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_41, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_42, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_43, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_44, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_45, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_46, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_47, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_48, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_50, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_51, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_52, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_53, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_54, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_55, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_56, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_57, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_58, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_59, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_60, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_61, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_62, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_63, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_64, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_65, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_66, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_67, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_68, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_72, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_73, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_75, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_78, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_81, Stores.STATUS.OK,"0",String.Empty, false));
-            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_90, Stores.STATUS.OK,"0",String.Empty, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_01, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_02, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_03, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_04, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_05, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_06, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_07, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_08, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_09, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_10, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_12, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_13, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_14, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_15, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_16, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_18, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_19, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_20, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_21, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_22, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_23, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_24, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_26, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_27, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_28, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_30, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_31, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_32, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_33, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_34, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_35, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_36, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_37, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_38, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_39, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_40, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_41, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_42, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_43, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_44, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_45, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_46, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_47, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_48, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_50, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_51, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_52, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_53, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_54, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_55, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_56, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_57, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_58, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_59, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_60, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_61, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_62, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_63, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_64, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_65, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_66, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_67, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_68, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_72, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_73, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_75, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_78, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_81, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_90, Stores.STATUS.OK,"0",String.Empty, false, false));
         }
 
         private bool UpdateVisulStatus(List<Stores> storesNewStatus)
@@ -1819,21 +1820,30 @@ namespace WpfAppReplicaStoreStatus
 
         private void SoundNotificationFatal()
         {
-            if (Stores.ListOfStores.Any(x => x.Status == Stores.STATUS.FATAL))
+            bool sound = false;
+            foreach(var item in Stores.ListOfStores)
             {
-                SoundPlayer soundPlayer = new SoundPlayer(Properties.Resources.notifiacationFatal);
-                soundPlayer.Play();
+                if(item.Status == Stores.STATUS.FATAL && item.AlreadySong == false)
+                {
+                    if(sound == false)
+                    {
+                        SoundPlayer soundPlayer = new SoundPlayer(Properties.Resources.notifiacationFatal);
+                        soundPlayer.Play();
+                        sound = true;
+                    }
+                    item.AlreadySong = true;
+                }
             }
         }
 
         private void UpdateListBoxMessage(List<Stores> storesNewStatus)
         {
-            var filterCode = storesNewStatus.DistinctBy(x => x.CodeOfStatus).Where(x => x.CodeOfStatus != "0");
+            var filterCode = storesNewStatus.Where(x => x.CodeOfStatus != "0").OrderByDescending(x => x.CodeOfStatus);
 
             ListBoxMessage.Items.Clear();
             foreach (var x in filterCode)
             {
-                ListBoxMessage.Items.Add("Codigo: " + x.CodeOfStatus + " Mensaje: " + x.Message);
+                ListBoxMessage.Items.Add("Tienda: "+ x.CodeStore.ToString().Split('_')[1] +" Codigo: " + x.CodeOfStatus + " Mensaje: " + x.Message);
             }
             ListBoxMessage.Items.MoveCurrentToLast();
             ListBoxMessage.ScrollIntoView(ListBoxMessage.Items.CurrentItem);
@@ -1886,16 +1896,25 @@ namespace WpfAppReplicaStoreStatus
             {
                 stores.Status = Stores.STATUS.WARNING;
                 stores.Updated = true;
+                stores.AlreadySong = false;
             }
-            else if (row[3].ToString() == "No" && stores.Status != Stores.STATUS.FATAL)
+            else if (row[3].ToString() == "No" && row[4].ToString() == "Yes" && stores.Status != Stores.STATUS.FATAL)
             {
                 stores.Status = Stores.STATUS.FATAL;
                 stores.Updated = true;
+                stores.AlreadySong = false;
             }
-            else if (row[3].ToString() == "Yes" && stores.Status != Stores.STATUS.OK)
+            else if (row[3].ToString() == "Yes" && row[4].ToString() == "Yes" && stores.Status != Stores.STATUS.OK)
             {
                 stores.Status = Stores.STATUS.OK;
                 stores.Updated = true;
+                stores.AlreadySong = false;
+            }
+            else if(row[3].ToString() != "Con" && row[4].ToString() == "No" && stores.Status != Stores.STATUS.FATAL)
+            {
+                stores.Status = Stores.STATUS.FATAL;
+                stores.Updated = true;
+                stores.AlreadySong = false;
             }
 
             stores.CodeOfStatus = row[7].ToString();
