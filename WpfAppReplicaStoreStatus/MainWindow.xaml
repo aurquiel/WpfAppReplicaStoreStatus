@@ -96,6 +96,12 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical">
+                    <Border BorderThickness="2" BorderBrush="Black" Width="{StaticResource side}" Height="{StaticResource side}" Margin="20" Visibility="{Binding Visibility, ElementName=store11_Ok}">
+                        <TextBlock x:Name="store11_Ok" Width="{StaticResource side}" Height="{StaticResource side}" Text="11" FontSize="{StaticResource fontSize}" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical">
                     <Border BorderThickness="2" BorderBrush="Black" Width="{StaticResource side}" Height="{StaticResource side}" Margin="20" Visibility="{Binding Visibility, ElementName=store12_Ok}">
                         <TextBlock x:Name="store12_Ok" Width="{StaticResource side}" Height="{StaticResource side}" Text="12" FontSize="{StaticResource fontSize}" FontWeight="Bold" TextAlignment="Center" Visibility="Visible"/>
                     </Border>
@@ -557,6 +563,15 @@
                     </Border>
                     <Border BorderThickness="2" BorderBrush="Black" Background="White" Width="{StaticResource side}" Height="{StaticResource heigthSmallbox}" Margin="0" Visibility="{Binding Visibility, ElementName=store10_Warning}">
                         <TextBlock x:Name="store10code_Warning" Width="{StaticResource side}" Height="{StaticResource heigthSmallbox}" Text="" FontSize="{StaticResource fontSizeSmallBox}" FontWeight="Bold" TextAlignment="Center" Visibility="{Binding Visibility, ElementName=store10_Warning}"/>
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical">
+                    <Border BorderThickness="2" BorderBrush="Black" Background="White" Width="{StaticResource side}" Height="{StaticResource side}" Margin="20" Visibility="{Binding Visibility, ElementName=store11_Warning}">
+                        <TextBlock x:Name="store11_Warning" Width="{StaticResource side}" Height="{StaticResource side}" Text="11" FontSize="{StaticResource fontSize}" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                    </Border>
+                    <Border BorderThickness="2" BorderBrush="Black" Background="White" Width="{StaticResource side}" Height="{StaticResource heigthSmallbox}" Margin="0" Visibility="{Binding Visibility, ElementName=store11_Warning}">
+                        <TextBlock x:Name="store11code_Warning" Width="{StaticResource side}" Height="{StaticResource heigthSmallbox}" Text="" FontSize="{StaticResource fontSizeSmallBox}" FontWeight="Bold" TextAlignment="Center" Visibility="{Binding Visibility, ElementName=store11_Warning}"/>
                     </Border>
                 </StackPanel>
 
@@ -1200,6 +1215,15 @@
                     </Border>
                     <Border BorderThickness="2" BorderBrush="Black" Background="White" Width="{StaticResource side}" Height="{StaticResource heigthSmallbox}" Margin="0" Visibility="{Binding Visibility, ElementName=store10_Fatal}">
                         <TextBlock x:Name="store10code_Fatal" Foreground="Black" Width="{StaticResource side}" Height="{StaticResource heigthSmallbox}" Text="" FontSize="{StaticResource fontSizeSmallBox}" FontWeight="Bold" TextAlignment="Center" Visibility="{Binding Visibility, ElementName=store10_Fatal}"/>
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical">
+                    <Border BorderThickness="2" BorderBrush="Black" Background="White" Width="{StaticResource side}" Height="{StaticResource side}" Margin="20" Visibility="{Binding Visibility, ElementName=store11_Fatal}">
+                        <TextBlock x:Name="store11_Fatal" Foreground="Black" Width="{StaticResource side}" Height="{StaticResource side}" Text="11" FontSize="{StaticResource fontSize}" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+                    </Border>
+                    <Border BorderThickness="2" BorderBrush="Black" Background="White" Width="{StaticResource side}" Height="{StaticResource heigthSmallbox}" Margin="0" Visibility="{Binding Visibility, ElementName=store11_Fatal}">
+                        <TextBlock x:Name="store11code_Fatal" Foreground="Black" Width="{StaticResource side}" Height="{StaticResource heigthSmallbox}" Text="" FontSize="{StaticResource fontSizeSmallBox}" FontWeight="Bold" TextAlignment="Center" Visibility="{Binding Visibility, ElementName=store11_Fatal}"/>
                     </Border>
                 </StackPanel>
 

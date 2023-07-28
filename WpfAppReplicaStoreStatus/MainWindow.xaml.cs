@@ -54,6 +54,7 @@ namespace WpfAppReplicaStoreStatus
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_08, Stores.STATUS.OK,"0",String.Empty, false, false));
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_09, Stores.STATUS.OK,"0",String.Empty, false, false));
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_10, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_11, Stores.STATUS.OK,"0",String.Empty, false, false));
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_12, Stores.STATUS.OK,"0",String.Empty, false, false));
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_13, Stores.STATUS.OK,"0",String.Empty, false, false));
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_14, Stores.STATUS.OK,"0",String.Empty, false, false));
@@ -364,6 +365,30 @@ namespace WpfAppReplicaStoreStatus
                         store10_Warning.Visibility = Visibility.Visible;
                         store10code_Warning.Text = store.CodeOfStatus;
                         store10_Fatal.Visibility = Visibility.Collapsed;
+                    }
+                }
+                else if (store.Updated && store.CodeStore == Stores.CODE_OF_STORE.STORE_11)
+                {
+                    flagEdited = true;
+                    if (store.Status == Stores.STATUS.OK)
+                    {
+                        store11_Ok.Visibility = Visibility.Visible;
+                        store11_Warning.Visibility = Visibility.Collapsed;
+                        store11_Fatal.Visibility = Visibility.Collapsed;
+                    }
+                    else if (store.Status == Stores.STATUS.FATAL)
+                    {
+                        store11_Ok.Visibility = Visibility.Collapsed;
+                        store11_Warning.Visibility = Visibility.Collapsed;
+                        store11_Fatal.Visibility = Visibility.Visible;
+                        store11code_Fatal.Text = store.CodeOfStatus;
+                    }
+                    else
+                    {
+                        store11_Ok.Visibility = Visibility.Collapsed;
+                        store11_Warning.Visibility = Visibility.Visible;
+                        store11code_Warning.Text = store.CodeOfStatus;
+                        store11_Fatal.Visibility = Visibility.Collapsed;
                     }
                 }
                 else if (store.Updated && store.CodeStore == Stores.CODE_OF_STORE.STORE_12)
@@ -1892,7 +1917,13 @@ namespace WpfAppReplicaStoreStatus
 
         private void SetStatus(Stores stores, DataRow row)
         {
-            if (row[3].ToString() == "Con" && stores.Status != Stores.STATUS.WARNING)
+            if (row[3].ToString() != "Con" && row[4].ToString() == "No" && stores.Status != Stores.STATUS.FATAL)
+            {
+                stores.Status = Stores.STATUS.FATAL;
+                stores.Updated = true;
+                stores.AlreadySong = false;
+            }
+            else if (row[3].ToString() == "Con" && stores.Status != Stores.STATUS.WARNING)
             {
                 stores.Status = Stores.STATUS.WARNING;
                 stores.Updated = true;
@@ -1907,12 +1938,6 @@ namespace WpfAppReplicaStoreStatus
             else if (row[3].ToString() == "Yes" && row[4].ToString() == "Yes" && stores.Status != Stores.STATUS.OK)
             {
                 stores.Status = Stores.STATUS.OK;
-                stores.Updated = true;
-                stores.AlreadySong = false;
-            }
-            else if(row[3].ToString() != "Con" && row[4].ToString() == "No" && stores.Status != Stores.STATUS.FATAL)
-            {
-                stores.Status = Stores.STATUS.FATAL;
                 stores.Updated = true;
                 stores.AlreadySong = false;
             }
@@ -1964,6 +1989,10 @@ namespace WpfAppReplicaStoreStatus
                 else if (row[0].ToString() == "AGENCIA 10")
                 {
                     SetStatus(Stores.ListOfStores[(int)Stores.CODE_OF_STORE.STORE_10], row);
+                }
+                else if (row[0].ToString() == "AGENCIA 11")
+                {
+                    SetStatus(Stores.ListOfStores[(int)Stores.CODE_OF_STORE.STORE_12], row);
                 }
                 else if (row[0].ToString() == "AGENCIA 12")
                 {
