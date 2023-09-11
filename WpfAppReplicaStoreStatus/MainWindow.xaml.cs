@@ -1992,7 +1992,7 @@ namespace WpfAppReplicaStoreStatus
                 }
                 else if (row[0].ToString() == "AGENCIA 11")
                 {
-                    SetStatus(Stores.ListOfStores[(int)Stores.CODE_OF_STORE.STORE_12], row);
+                    SetStatus(Stores.ListOfStores[(int)Stores.CODE_OF_STORE.STORE_11], row);
                 }
                 else if (row[0].ToString() == "AGENCIA 12")
                 {
@@ -2235,26 +2235,34 @@ namespace WpfAppReplicaStoreStatus
 
         private async Task CheckStatusStore()
         {
-            try
+            for (int attempts = 0; attempts < 2; attempts++)
             {
-                QueriesForConsult queriesForConsult = new QueriesForConsult();
-                DataTable queryResult = await queriesForConsult.GetStoresStatusTableInfo();
-                SetStatusFromDB(queryResult);
-                _dataMain.StatusServer = "CONEXION SERVIDOR: EXITOSA";
-                _backgroundWorker.ReportProgress(0, Stores.ListOfStores);
-            }
-            catch(Exception e) 
-            {
-                foreach (var item in Stores.ListOfStores)
+                try
                 {
-                    item.Status = Stores.STATUS.WARNING;
-                    item.CodeOfStatus = "-1";
-                    item.Message = "CONEXION SERVISOR: FALLIDA";
-                    item.Updated = true;
+                    QueriesForConsult queriesForConsult = new QueriesForConsult();
+                    DataTable queryResult = await queriesForConsult.GetStoresStatusTableInfo();
+                    SetStatusFromDB(queryResult);
+                    _dataMain.StatusServer = "CONEXION SERVIDOR: EXITOSA";
+                    _backgroundWorker.ReportProgress(0, Stores.ListOfStores);
+                    break;
                 }
+                catch (Exception e)
+                {
+                    if(attempts > 0)
+                    {
+                        foreach (var item in Stores.ListOfStores)
+                        {
+                            item.Status = Stores.STATUS.WARNING;
+                            item.CodeOfStatus = "-1";
+                            item.Message = "CONEXION SERVISOR: FALLIDA";
+                            item.Updated = true;
+                        }
 
-                _dataMain.StatusServer = "CONEXION SERVIDOR: FALLIDA";
-                _backgroundWorker.ReportProgress(0, Stores.ListOfStores);
+                        _dataMain.StatusServer = "CONEXION SERVIDOR: FALLIDA";
+                        _backgroundWorker.ReportProgress(0, Stores.ListOfStores);
+                    }
+                }
+                await Task.Delay(200);
             }
         }
 

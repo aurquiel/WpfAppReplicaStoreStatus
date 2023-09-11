@@ -4,7 +4,7 @@ namespace ClassLibraryMysql
 {
     public class Database
     {
-        public int SQL_TIMEOUT_EXECUTION_COMMAND = 10; //By default is 5 seconds
+        public int SQL_TIMEOUT_EXECUTION_COMMAND = 20; //By default is 5 seconds
 
         protected string GetSettingsConenction()
         {

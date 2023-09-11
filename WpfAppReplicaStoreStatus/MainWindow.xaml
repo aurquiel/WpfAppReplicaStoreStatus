@@ -1762,6 +1762,6 @@
         <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Stretch">
             <ListBox  x:Name="ListBoxMessage" Background="White" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="35" FontWeight="Bold"/>
         </StackPanel>
-        <Label Grid.Row="6" Background="Beige" Content="{Binding StatusServer, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35" FontWeight="Bold"/>
+        <Label Grid.Row="6" Background="White" Content="{Binding StatusServer, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35" FontWeight="Bold"/>
     </Grid>
 </Window>
