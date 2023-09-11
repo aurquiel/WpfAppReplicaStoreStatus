@@ -61,11 +61,7 @@ namespace ClassLibraryMysql
         {
             DataTable dataTableFirst = await FirstBulk();
             DataTable dataTableSecond = await SecondBulk();
-            if(dataTableFirst.Columns.Count != 0)
-            {
-                ; 
-            }
-            else if (dataTableSecond.Columns.Count != 0)
+            if(dataTableFirst.Columns.Count != 0 && dataTableSecond.Columns.Count != 0)
             {
                 ;
             }
