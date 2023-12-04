@@ -67,6 +67,7 @@ namespace WpfAppReplicaStoreStatus
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_22, Stores.STATUS.OK,"0",String.Empty, false, false));
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_23, Stores.STATUS.OK,"0",String.Empty, false, false));
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_24, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_25, Stores.STATUS.OK,"0",String.Empty, false, false));
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_26, Stores.STATUS.OK,"0",String.Empty, false, false));
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_27, Stores.STATUS.OK,"0",String.Empty, false, false));
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_28, Stores.STATUS.OK,"0",String.Empty, false, false));
@@ -112,6 +113,7 @@ namespace WpfAppReplicaStoreStatus
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_73, Stores.STATUS.OK,"0",String.Empty, false, false));
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_75, Stores.STATUS.OK,"0",String.Empty, false, false));
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_78, Stores.STATUS.OK,"0",String.Empty, false, false));
+            Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_80, Stores.STATUS.OK,"0",String.Empty, false, false));
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_81, Stores.STATUS.OK,"0",String.Empty, false, false));
             Stores.ListOfStores.Add(new Stores(Stores.CODE_OF_STORE.STORE_90, Stores.STATUS.OK,"0",String.Empty, false, false));
         }
@@ -685,6 +687,33 @@ namespace WpfAppReplicaStoreStatus
                         store24_Fatal.Visibility = Visibility.Collapsed;
                     }
                 }
+
+
+                else if (store.Updated && store.CodeStore == Stores.CODE_OF_STORE.STORE_25)
+                {
+                    flagEdited = true;
+                    if (store.Status == Stores.STATUS.OK)
+                    {
+                        store25_Ok.Visibility = Visibility.Visible;
+                        store25_Warning.Visibility = Visibility.Collapsed;
+                        store25_Fatal.Visibility = Visibility.Collapsed;
+                    }
+                    else if (store.Status == Stores.STATUS.FATAL)
+                    {
+                        store25_Ok.Visibility = Visibility.Collapsed;
+                        store25_Warning.Visibility = Visibility.Collapsed;
+                        store25_Fatal.Visibility = Visibility.Visible;
+                        store25code_Fatal.Text = store.CodeOfStatus;
+                    }
+                    else
+                    {
+                        store25_Ok.Visibility = Visibility.Collapsed;
+                        store25_Warning.Visibility = Visibility.Visible;
+                        store25code_Warning.Text = store.CodeOfStatus;
+                        store25_Fatal.Visibility = Visibility.Collapsed;
+                    }
+                }
+
                 else if (store.Updated && store.CodeStore == Stores.CODE_OF_STORE.STORE_26)
                 {
                     flagEdited = true;
@@ -1785,6 +1814,30 @@ namespace WpfAppReplicaStoreStatus
                         store78_Fatal.Visibility = Visibility.Collapsed;
                     }
                 }
+                else if (store.Updated && store.CodeStore == Stores.CODE_OF_STORE.STORE_80)
+                {
+                    flagEdited = true;
+                    if (store.Status == Stores.STATUS.OK)
+                    {
+                        store80_Ok.Visibility = Visibility.Visible;
+                        store80_Warning.Visibility = Visibility.Collapsed;
+                        store80_Fatal.Visibility = Visibility.Collapsed;
+                    }
+                    else if (store.Status == Stores.STATUS.FATAL)
+                    {
+                        store80_Ok.Visibility = Visibility.Collapsed;
+                        store80_Warning.Visibility = Visibility.Collapsed;
+                        store80_Fatal.Visibility = Visibility.Visible;
+                        store80code_Fatal.Text = store.CodeOfStatus;
+                    }
+                    else
+                    {
+                        store80_Ok.Visibility = Visibility.Collapsed;
+                        store80_Warning.Visibility = Visibility.Visible;
+                        store80code_Warning.Text = store.CodeOfStatus;
+                        store80_Fatal.Visibility = Visibility.Collapsed;
+                    }
+                }
                 else if (store.Updated && store.CodeStore == Stores.CODE_OF_STORE.STORE_81)
                 {
                     flagEdited = true;
@@ -2042,6 +2095,10 @@ namespace WpfAppReplicaStoreStatus
                 {
                     SetStatus(Stores.ListOfStores[(int)Stores.CODE_OF_STORE.STORE_24], row);
                 }
+                else if (row[0].ToString() == "AGENCIA 25")
+                {
+                    SetStatus(Stores.ListOfStores[(int)Stores.CODE_OF_STORE.STORE_25], row);
+                }
                 else if (row[0].ToString() == "AGENCIA 26")
                 {
                     SetStatus(Stores.ListOfStores[(int)Stores.CODE_OF_STORE.STORE_26], row);
@@ -2221,6 +2278,10 @@ namespace WpfAppReplicaStoreStatus
                 else if (row[0].ToString() == "AGENCIA 78")
                 {
                     SetStatus(Stores.ListOfStores[(int)Stores.CODE_OF_STORE.STORE_78], row);
+                }
+                else if (row[0].ToString() == "AGENCIA 80")
+                {
+                    SetStatus(Stores.ListOfStores[(int)Stores.CODE_OF_STORE.STORE_80], row);
                 }
                 else if (row[0].ToString() == "AGENCIA 81")
                 {
